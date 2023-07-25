@@ -1,8 +1,12 @@
-# React + Vite
+#Proyecto Todo con React Vite y Tailwind
+Este es un proyecto Todo desarrollado utilizando React con Vite como el bundler y Tailwind CSS como el framework de estilos.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [preview app] (https://vite-react-tw-todo-frontend-mentor.netlify.app/)
 
-Currently, two official plugins are available:
+Descripción
+El proyecto Todo es una aplicación simple que te permite crear, editar y eliminar tareas. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tecnologías Utilizadas:
+React
+Vite
+Tailwind CSS
