@@ -1,4 +1,3 @@
-import CrossIcon from "./components/icons/CrossIcon";
 import Header from "./components/Header";
 import TodoCreate from "./components/TodoCreate";
 import TodoList from "./components/TodoList";
