@@ -9,10 +9,10 @@ const TodoCreate = ({ createTodo }) => {
         if (!title.trim()) {
             return setTitle("")
         }
-        else {
-            createTodo(title);
-            setTitle("");
-        }
+
+        createTodo(title);
+        setTitle("");
+
     }
 
 

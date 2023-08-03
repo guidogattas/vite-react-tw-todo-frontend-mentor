@@ -9,7 +9,7 @@ import { useState } from "react";
 const initialStateTodos = [
   { id: 1, title: "Buy bread", completed: true },
   { id: 2, title: "Cook", completed: false },
-  { id: 3, title: "Study", completed: false },
+  { id: 3, title: "Study", completed: true },
   { id: 4, title: "Watch a movie", completed: false }
 ]
 
@@ -24,7 +24,14 @@ const App = () => {
       completed: false,
     }
     setTodos([...todos, newTodo])
+  }
 
+  const removeTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  }
+
+  const updateTodo = (id) => {
+    setTodos(todos.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo))
   }
 
   return (
@@ -33,7 +40,7 @@ const App = () => {
 
       <main className="container px-4 mx-auto mt-8">
         <TodoCreate createTodo={createTodo} />
-        <TodoList todos={todos} />
+        <TodoList todos={todos} removeTodo={removeTodo} updateTodo={updateTodo} />
         <TodoComputed />
         <TodoFilter />
       </main>
