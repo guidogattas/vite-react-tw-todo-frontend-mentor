@@ -34,6 +34,13 @@ const App = () => {
     setTodos(todos.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo))
   }
 
+  const computedItemsLeft = todos.filter(todo => !todo.completed).length
+
+  const clearCompleted = () => {
+    setTodos(todos.filter((todo) => !todo.completed));
+  }
+
+
   return (
     <div className="bg-[url('./assets/images/bg-mobile-light.jpg')] bg-no-repeat bg-contain bg-gray-300 min-h-screen">
       <Header />
@@ -41,7 +48,7 @@ const App = () => {
       <main className="container px-4 mx-auto mt-8">
         <TodoCreate createTodo={createTodo} />
         <TodoList todos={todos} removeTodo={removeTodo} updateTodo={updateTodo} />
-        <TodoComputed />
+        <TodoComputed computedItemsLeft={computedItemsLeft} clearCompleted={clearCompleted} />
         <TodoFilter />
       </main>
       <Footer />
