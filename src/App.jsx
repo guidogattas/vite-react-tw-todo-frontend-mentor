@@ -26,6 +26,7 @@ const App = () => {
     }
   }
 
+  const changeFilter = (filter) => { setFilter(filter) }
 
   const createTodo = (title) => {
     const newTodo = {
@@ -50,7 +51,7 @@ const App = () => {
     setTodos(todos.filter((todo) => !todo.completed));
   }
 
-  const changeFilter = (filter) => { setFilter(filter) }
+
 
 
   return (
@@ -58,7 +59,7 @@ const App = () => {
       className="
           bg-[url('./assets/images/bg-mobile-light.jpg')]
           dark:bg-[url('./assets/images/bg-mobile-dark.jpg')]
-          bg-no-repeat bg-contain bg-gray-300 min-h-screen dark:bg-gray-900">
+          bg-no-repeat bg-contain transition-all duration-1000 bg-gray-300 min-h-screen dark:bg-gray-900">
       <Header />
 
       <main className="container px-4 mx-auto mt-8">
