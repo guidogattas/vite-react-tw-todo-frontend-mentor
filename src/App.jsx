@@ -4,18 +4,24 @@ import TodoList from "./components/TodoList";
 import TodoComputed from "./components/TodoComputed";
 import TodoFilter from "./components/TodoFilter";
 import Footer from "./components/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const initialStateTodos = [
-  { id: 1, title: "Buy bread", completed: true },
-  { id: 2, title: "Cook", completed: false },
-  { id: 3, title: "Study", completed: true },
-  { id: 4, title: "Watch a movie", completed: false }
-]
+const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || [
+  { id: 1, title: "Aquí", completed: false },
+  { id: 2, title: "Van", completed: false },
+  { id: 3, title: "Tus", completed: false },
+  { id: 4, title: "Todos", completed: false }
+];
+
 
 const App = () => {
 
   const [todos, setTodos] = useState(initialStateTodos);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos])
+
   const [filter, setFilter] = useState('all')
 
   const filteredTodos = () => {
