@@ -57,18 +57,17 @@ const App = () => {
     setTodos(todos.filter((todo) => !todo.completed));
   }
 
-
-
-
   return (
     <div
       className="
           bg-[url('./assets/images/bg-mobile-light.jpg')]
           dark:bg-[url('./assets/images/bg-mobile-dark.jpg')]
+          md:bg-[url('./assets/images/bg-desktop-light.jpg')]
+          md:dark:bg-[url('./assets/images/bg-desktop-dark.jpg')]
           bg-no-repeat bg-contain transition-all duration-1000 bg-gray-300 min-h-screen dark:bg-gray-900">
       <Header />
 
-      <main className="container px-4 mx-auto mt-8">
+      <main className="container px-4 mx-auto mt-8 md:max-w-xl ">
         <TodoCreate
           createTodo={createTodo} />
         <TodoList
