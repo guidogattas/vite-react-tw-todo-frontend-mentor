@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import IconMoon from './icons/IconMoon'
-import IconSun from './icons/iconSun'
+import IconSun from './icons/IconSun'
 
 const initialStateDarkMode = localStorage.getItem('theme') === 'dark'
 
