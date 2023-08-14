@@ -27,15 +27,15 @@ const Header = () => {
   return (
     <header className="container px-4 pt-8 mx-auto font-semibold md:max-w-xl">
       <div className="flex justify-between">
-        <div className="flex items-center">
-          <div className="relative p-4 text-white transition duration-500 ease-in-out bg-transparent border border-none rounded-full cursor-pointer md:p-8 group ">
+        <div className="items-center ">
+          <div className="relative p-4 text-white transition duration-500 ease-in-out bg-transparent border border-none rounded-full cursor-pointer group ">
             <div className="relative flex items-center text-6xl uppercase">
               <div className={`${transitionLetter}`} style={{ transitionDelay: "0ms" }}>T</div>
               <div className={`${transitionLetter}`} style={{ transitionDelay: "75ms" }}>O</div>
               <div className={`${transitionLetter}`} style={{ transitionDelay: "150ms" }}>D</div>
               <div className={`${transitionLetter}`} style={{ transitionDelay: "225ms" }}>O</div>
             </div>
-            <div className="absolute flex items-center text-6xl uppercase bottom-3">
+            <div className="absolute flex items-center text-6xl uppercase bottom-[18px]">
               <div className={`${bottomTransitionLetter}`} style={{ transitionDelay: "0ms" }}>T</div>
               <div className={`${bottomTransitionLetter}`} style={{ transitionDelay: "75ms" }}>O</div>
               <div className={`${bottomTransitionLetter}`} style={{ transitionDelay: "150ms" }}>D</div>
