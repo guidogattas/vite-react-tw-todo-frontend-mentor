@@ -9,4 +9,8 @@
   h2 {
     @apply font-light text-xl mb-3;
   }
+  .transition {
+    background-color: red;
+  }
+
 }
